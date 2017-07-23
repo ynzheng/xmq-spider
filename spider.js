@@ -1,13 +1,11 @@
 const sp = require("superagent");
 const schedule = require('node-schedule')
 const Message = require("./models/message");
-const yt =
-  "https://wapi.xiaomiquan.com/v1.6/groups/518455544414/topics/limit";
+
 const ytid = '518455544414'
-const zc = "https://wapi.xiaomiquan.com/v1.6/groups/481222581158/topics/limit"
 const zcid = '481222581158'
-const bz = "https://wapi.xiaomiquan.com/v1.6/groups/158111452852/topics/limit"
 const bzid = '281285214811'
+const bsid = '158185288822'
 
 const {
   pushMessage
@@ -58,6 +56,7 @@ let main = async () => {
   await getMessage(ytid);
   await getMessage(zcid);
   await getMessage(bzid);
+  await getMessage(bsid);
 }
 
 // main()
